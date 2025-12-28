@@ -1,4 +1,4 @@
-# Cod3BlackAgency
+![Cod3BlackAgency](./assets/banner.png)
 
 Full-stack product studio. AI integration, web applications, production-ready MVPs.
 
