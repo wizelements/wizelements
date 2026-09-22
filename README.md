@@ -67,7 +67,7 @@ Clear scope. Evidence-backed completion. Source ownership.
 
 <div align="center">
 
-## CURRENT SYSTEMS
+## ðŸš€ CURRENT SYSTEMS
 
 </div>
 
@@ -76,14 +76,14 @@ Clear scope. Evidence-backed completion. Source ownership.
 | **OPEE** | Outcome operating system for governed multi-system execution, evidence, verification, recovery, and value measurement | Active proprietary system |
 | [**Cod3Black Agency**](https://github.com/wizelements/c3bai) | Commercial front door for done-for-you AI business systems, websites, funnels, dashboards, and automation | Active commercial platform |
 | **Cod3Black Signal** | Structured lead-intelligence and diagnosis edge feeding Cod3Black opportunities into governed workflows | Active private system |
-| [**Taste of Gratitude / Gratog**](https://github.com/wizelements/Gratog) | Commerce and operations platform for the live beverage and sea moss brand | Active production system — [tasteofgratitude.shop](https://tasteofgratitude.shop) |
+| [**Taste of Gratitude / Gratog**](https://github.com/wizelements/Gratog) | Commerce and operations platform for the live beverage and sea moss brand | Active production system â€” [tasteofgratitude.shop](https://tasteofgratitude.shop) |
 | **MusiCards** | Deterministic music-learning game studio with governed AI boundaries and explicit production gates | Active private product |
 | [**NHBBI CRM**](https://github.com/wizelements/nhbbi-crm) | CRM, membership, payment, and communications platform | Active product |
 | [**ASCA PWA**](https://github.com/wizelements/asca-pwa) | PWA + admin platform for Atlanta Saddle Club Association | Active client/product system |
 
 ### Retained product assets
 
-[Ownly](https://github.com/wizelements/Ownly) · [SD Studio Web](https://github.com/wizelements/sd-studio-web) · [Family Powerhouse](https://github.com/wizelements/family-powerhouse) · [Notion Perfect PDF](https://github.com/wizelements/notionexporterpdf) · [SaaS Opportunity Bot](https://github.com/wizelements/saas-opportunity-bot)
+[Ownly](https://github.com/wizelements/Ownly) Â· [SD Studio Web](https://github.com/wizelements/sd-studio-web) Â· [Family Powerhouse](https://github.com/wizelements/family-powerhouse) Â· [Notion Perfect PDF](https://github.com/wizelements/notionexporterpdf) Â· [SaaS Opportunity Bot](https://github.com/wizelements/saas-opportunity-bot)
 
 > Historical, superseded, upstream-reference, and placeholder repositories are archived so the active portfolio represents current work instead of every experiment ever built.
 
