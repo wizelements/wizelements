@@ -24,7 +24,7 @@ Clear scope. Evidence-backed completion. Source ownership.
 
 <br><br>
 
-[![Portfolio](https://img.shields.io/badge/PORTFOLIO-cod3blackagency.com-7c3aed?style=for-the-badge&logo=google-chrome&logoColor=white)](https://cod3blackagency.com)
+[![Portfolio](https://img.shields.io/badge/PORTFOLIO-c3bai--nu.vercel.app-7c3aed?style=for-the-badge&logo=google-chrome&logoColor=white)](https://c3bai-nu.vercel.app)
 [![LinkedIn](https://img.shields.io/badge/CONNECT-Solomon_Watkins-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/solomonwatkins)
 
 </div>
