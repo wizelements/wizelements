@@ -6,14 +6,14 @@
 <br>
 
 <!-- ANIMATED TAGLINE -->
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=7C3AED&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=80&lines=From+idea+to+revenue+in+6-8+weeks;Production-grade+products%2C+not+prototypes" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=7C3AED&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=80&lines=From+business+objective+to+verified+system;AI+products%2C+automation%2C+and+operating+infrastructure" alt="Typing SVG" /></a>
 
 <br><br>
 
 <!-- POSITIONING -->
-**Cod3Black Agency** is an AI-native development studio helping<br>
-**SaaS founders and teams** ship production-ready products **fast**.<br>
-We build what makes money. You own everything.
+**Cod3Black Agency** builds outcome-focused software, automation, and AI systems.<br>
+We prioritize verified value, usable handoff, and systems that can create revenue or save meaningful time.<br>
+Clear scope. Evidence-backed completion. Source ownership.
 
 <br><br>
 
@@ -50,7 +50,7 @@ We build what makes money. You own everything.
 
 🛒 **eCOMMERCE & BILLING**  
 *Stripe, Shopify, subscription flows*  
-<sub>Analytics, churn tracking, upsells from day one</sub>
+<sub>Payments, catalog/order flows, subscriptions, reporting</sub>
 
 </td>
 <td align="center" width="33%">
@@ -67,39 +67,25 @@ We build what makes money. You own everything.
 
 <div align="center">
 
-## 🚀 FLAGSHIP PRODUCTS
-
-<a href="https://github.com/wizelements/sd-studio-web">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=wizelements&repo=sd-studio-web&theme=midnight-purple&border_color=7c3aed&bg_color=0d1117" />
-</a>
-<br>
-<sub>AI image generation studio – prototype to production in 2 weeks. Live on Vercel.</sub>
-
-<br><br>
-
-<a href="https://github.com/wizelements/Ownly">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=wizelements&repo=Ownly&theme=midnight-purple&border_color=7c3aed&bg_color=0d1117" />
-</a>
-<br>
-<sub>Full eCommerce platform with Stripe payments, inventory, and order management.</sub>
-
-<br><br>
-
-<a href="https://github.com/wizelements/family-powerhouse">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=wizelements&repo=family-powerhouse&theme=midnight-purple&border_color=7c3aed&bg_color=0d1117" />
-</a>
-<br>
-<sub>Family management SaaS with calendars, tasks, and resource coordination.</sub>
-
-<br><br>
-
-<a href="https://github.com/wizelements/cba-ai-platform">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=wizelements&repo=cba-ai-platform&theme=midnight-purple&border_color=7c3aed&bg_color=0d1117" />
-</a>
-<br>
-<sub>Internal agency platform for AI-assisted development and client management.</sub>
+## CURRENT SYSTEMS
 
 </div>
+
+| System | What it is | Current role |
+| --- | --- | --- |
+| **OPEE** | Outcome operating system for governed multi-system execution, evidence, verification, recovery, and value measurement | Active proprietary system |
+| [**Cod3Black Agency**](https://github.com/wizelements/c3bai) | Commercial front door for done-for-you AI business systems, websites, funnels, dashboards, and automation | Active commercial platform |
+| **Cod3Black Signal** | Structured lead-intelligence and diagnosis edge feeding Cod3Black opportunities into governed workflows | Active private system |
+| [**Taste of Gratitude / Gratog**](https://github.com/wizelements/Gratog) | Commerce and operations platform for the live beverage and sea moss brand | Active production system � [tasteofgratitude.shop](https://tasteofgratitude.shop) |
+| **MusiCards** | Deterministic music-learning game studio with governed AI boundaries and explicit production gates | Active private product |
+| [**NHBBI CRM**](https://github.com/wizelements/nhbbi-crm) | CRM, membership, payment, and communications platform | Active product |
+| [**ASCA PWA**](https://github.com/wizelements/asca-pwa) | PWA + admin platform for Atlanta Saddle Club Association | Active client/product system |
+
+### Retained product assets
+
+[Ownly](https://github.com/wizelements/Ownly) � [SD Studio Web](https://github.com/wizelements/sd-studio-web) � [Family Powerhouse](https://github.com/wizelements/family-powerhouse) � [Notion Perfect PDF](https://github.com/wizelements/notionexporterpdf) � [SaaS Opportunity Bot](https://github.com/wizelements/saas-opportunity-bot)
+
+> Historical, superseded, upstream-reference, and placeholder repositories are archived so the active portfolio represents current work instead of every experiment ever built.
 
 ---
 
@@ -152,20 +138,20 @@ We build what makes money. You own everything.
 
 <table align="center">
 <tr>
-<td>✅ <b>Production-Ready</b></td>
-<td>Not prototypes. Real products with CI/CD, tests, and monitoring.</td>
+<td>✅ <b>Verified Delivery</b></td>
+<td>Scope, evidence, completion gates, and explicit production status.</td>
 </tr>
 <tr>
-<td>✅ <b>AI-Native</b></td>
-<td>Every project leverages AI for faster development AND smarter features.</td>
+<td>✅ <b>AI Where Useful</b></td>
+<td>AI is applied where it materially improves the customer or operating outcome.</td>
 </tr>
 <tr>
 <td>✅ <b>Revenue-Focused</b></td>
-<td>We build what makes money. Stripe integrated. Analytics included.</td>
+<td>We prioritize sales, efficiency, capacity, retention, and reusable leverage.</td>
 </tr>
 <tr>
 <td>✅ <b>Transparent</b></td>
-<td>Code lives in your GitHub org. You own everything. No lock-in.</td>
+<td>Clear source access, handoff expectations, and no hidden manual completion path.</td>
 </tr>
 </table>
 
@@ -183,7 +169,7 @@ We build what makes money. You own everything.
 
 <br><br>
 
-**⚡ We take on 2-3 clients per quarter for maximum focus**
+**⚡ Focused engagements. Clear scope. Verified handoff.**
 
 <br>
 
