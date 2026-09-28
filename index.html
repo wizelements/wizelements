@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>OPEE Mobile v2 — Design Review</title>
+<style>
+:root{--bg:#0a0c0f;--panel:#12151a;--line:#272d35;--text:#f5f6f3;--muted:#8a929b}
+*{box-sizing:border-box}html{background:var(--bg)}body{margin:0;background:radial-gradient(circle at 90% -10%,#1b1e23 0,transparent 30%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+.wrap{max-width:1380px;margin:auto;padding:26px 16px 50px}
+header{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:24px}.eyebrow{font-size:10px;letter-spacing:.16em;color:#7e8690}h1{font-size:34px;line-height:1.04;letter-spacing:-.045em;margin:7px 0 9px}.lead{max-width:780px;color:#929aa3;font-size:12px;line-height:1.6;margin:0}.badge{font-size:10px;border:1px solid #303640;border-radius:999px;padding:8px 11px;color:#a3a9b0;white-space:nowrap}
+.grid{display:grid;grid-template-columns:1fr;gap:18px}.concept{background:#111419;border:1px solid var(--line);border-radius:22px;padding:14px;box-shadow:0 18px 60px #0004}
+.concept-head{display:flex;justify-content:space-between;gap:12px;align-items:start;padding:3px 3px 12px}.concept-head b{font-size:14px}.concept-head small{display:block;color:#7f8791;font-size:10px;margin-top:4px}.decision{font-size:9px;color:#8f97a0}
+.preview{border-radius:16px;padding:18px;min-height:390px;border:1px solid transparent;overflow:hidden}.minihead{display:flex;justify-content:space-between;align-items:center;font-size:9px;margin-bottom:18px}.nav{display:flex;gap:6px}.nav span{padding:6px 8px;border-radius:8px}.kicker{font-size:8px;letter-spacing:.13em;opacity:.55}.preview h2{font-size:28px;line-height:1.08;letter-spacing:-.045em;max-width:740px;margin:7px 0 12px}.sub{font-size:10px;line-height:1.55;opacity:.62;max-width:680px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:14px}.stat{border-radius:10px;padding:10px;border:1px solid transparent}.stat b{font-size:17px}.stat span{display:block;font-size:8px;opacity:.58;margin-top:3px}
+.cols{display:grid;grid-template-columns:1.1fr .9fr;gap:9px;margin-top:11px}.panel{border-radius:12px;padding:11px;border:1px solid transparent}.row{display:flex;justify-content:space-between;padding:9px 0;border-top:1px solid transparent}.row:first-child{border-top:0}.row b,.row span{font-size:9px}.bubble{font-size:9px;line-height:1.48;padding:9px;border-radius:10px;margin-top:8px;max-width:90%}.bubble.me{margin-left:auto}
+.actions{display:flex;gap:8px;flex-wrap:wrap;padding:12px 3px 2px}.actions button{border:1px solid #343b45;background:#171b21;color:#f7f7f4;border-radius:999px;padding:8px 11px;font-size:10px}.actions button:hover{border-color:#5b6572}.saved{align-self:center;font-size:10px;color:#9da4ac;margin-left:4px}
+/* themes */
+.dark{background:#090b0e;color:#f7f7f4;border-color:#292f37}.dark .nav span:first-child{background:#1b2027}.dark .stat,.dark .panel{background:#11151a;border-color:#242a32}.dark .row{border-color:#242a32}.dark .bubble{background:#171c22;border:1px solid #29303a}.dark .bubble.me{background:#2a3038}.dark .accent{color:#d5b25e}
+.warm{background:#fbf7f1;color:#241f1a;border-color:#eadfd6}.warm .nav span:first-child{background:#fff;box-shadow:0 3px 12px #6c513319}.warm .stat,.warm .panel{background:#fff;border-color:#eadfd6}.warm .heroPanel{background:#f0ddd2}.warm .row{border-color:#eee4dc}.warm .chatPanel{background:#27343d;color:white}.warm .bubble{background:#334550}.warm .bubble.me{background:white;color:#27343d}.warm .accent{color:#c95d42}
+.ai{background:#f5f6f8;color:#202328;border-color:#e1e5e9}.ai .nav span:first-child{background:#111316;color:#fff}.ai .stat,.ai .panel{background:#fff;border-color:#e2e6ea}.ai .row{border-color:#e4e7eb}.ai .bubble{background:#fff;border:1px solid #e1e5e8}.ai .bubble.me{background:#20242a;color:#fff}.ai .accent{color:#28895b}
+.analytics{background:#0c1014;color:#eef3f7;border-color:#222a31}.analytics .nav span:nth-child(2){background:#16232c;color:#53c9ff}.analytics .stat,.analytics .panel{background:#11171c;border-color:#222a31}.analytics .row{border-color:#222a31}.analytics .bubble{background:#151d23;border:1px solid #26323a}.analytics .bubble.me{background:#20516a}.analytics .accent{color:#53c9ff}
+.hybrid{background:#f3f5f4;color:#1c2023;border-color:#e1e5e3}.hybrid .nav span:first-child{background:#17191c;color:white}.hybrid .stat,.hybrid .panel{background:#fff;border-color:#e1e5e3}.hybrid .heroPanel{background:#111418;color:#f8f8f6}.hybrid .row{border-color:#e4e7e5}.hybrid .bubble{background:#eef5f0;border:1px solid #dce6df}.hybrid .bubble.me{background:#1b1e22;color:white}.hybrid .accent{color:#a68b46}
+@media(max-width:850px){.wrap{padding:18px 12px 36px}header{display:block}.badge{display:inline-block;margin-top:12px}.preview{padding:13px;min-height:340px}.preview h2{font-size:22px}.nav{display:none}.stats{grid-template-columns:repeat(2,1fr)}.cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div><div class="eyebrow">ONE-OFF OPEE MOBILE V2 REVIEW</div><h1>Choose the visual direction.</h1><p class="lead">Five standalone design directions for the future OPEE dashboard. Review each concept, then save Approve, Needs Changes, or Reject. Your decisions are stored only in this browser.</p></div>
+<div class="badge">5 concepts · mobile friendly</div>
+</header>
+<div class="grid">
+
+<section class="concept" data-id="executive">
+<div class="concept-head"><div><b>01 · Executive Dark</b><small>Vercel-style discipline · premium operator console</small></div><span class="decision"></span></div>
+<div class="preview dark">
+<div class="minihead"><strong>OPEE</strong><div class="nav"><span>Overview</span><span>Clove</span><span>Work</span><span>Analytics</span><span>Systems</span></div><span>● LIVE</span></div>
+<div class="kicker">EXECUTIVE CONTROL PLANE</div><h2>Everything important, without the noise.</h2><div class="sub">A dense but calm operational dashboard for serious daily use.</div>
+<div class="stats"><div class="stat"><b>38</b><span>Completed</span></div><div class="stat"><b>94%</b><span>Verified</span></div><div class="stat"><b>11.6h</b><span>Time saved</span></div><div class="stat"><b>2</b><span>Need you</span></div></div>
+<div class="cols"><div class="panel"><div class="row"><b>OPEE Mobile v2</b><span class="accent">RUNNING</span></div><div class="row"><b>Studio closure</b><span class="accent">PASS</span></div><div class="row"><b>Codex action</b><span class="accent">VERIFIED</span></div></div><div class="panel"><b style="font-size:10px">Clove</b><div class="bubble">Two items need your approval.</div><div class="bubble me">Show me the highest-impact one.</div></div></div>
+</div>
+<div class="actions"><button data-v="approve">Approve</button><button data-v="changes">Needs Changes</button><button data-v="reject">Reject</button><span class="saved"></span></div>
+</section>
+
+<section class="concept" data-id="warm">
+<div class="concept-head"><div><b>02 · Warm Operator</b><small>Airbnb warmth · approachable premium workspace</small></div><span class="decision"></span></div>
+<div class="preview warm">
+<div class="minihead"><strong>OPEE</strong><div class="nav"><span>Home</span><span>Clove</span><span>Work</span><span>Insights</span><span>Systems</span></div><span>Operator</span></div>
+<div class="cols"><div class="panel heroPanel"><div class="kicker">YOUR AI OPERATING ENVIRONMENT</div><h2>Work feels lighter when the system knows what matters.</h2><div class="sub">Tasks, approvals, AI workers, documents and outcomes in one calm place.</div><div class="stats"><div class="stat"><b>12</b><span>Outcomes</span></div><div class="stat"><b>9</b><span>Verified</span></div><div class="stat"><b>2</b><span>Awaiting</span></div><div class="stat"><b>2.8h</b><span>Saved</span></div></div></div><div class="panel chatPanel"><b style="font-size:10px">Clove</b><div class="bubble">You have two decisions waiting.</div><div class="bubble me">Show me the mobile design options.</div></div></div>
+</div>
+<div class="actions"><button data-v="approve">Approve</button><button data-v="changes">Needs Changes</button><button data-v="reject">Reject</button><span class="saved"></span></div>
+</section>
+
+<section class="concept" data-id="ai">
+<div class="concept-head"><div><b>03 · AI Workspace</b><small>ChatGPT-inspired conversation first · context attached</small></div><span class="decision"></span></div>
+<div class="preview ai">
+<div class="minihead"><strong>OPEE</strong><div class="nav"><span>Clove</span><span>Work</span><span>Context</span><span>Evidence</span></div><span class="accent">● HEALTHY</span></div>
+<div class="kicker">CLOVE · GOVERNED AI WORKSPACE</div><h2>What are we working on?</h2><div class="sub">Clove becomes the primary surface while OPEE governance stays visible beside the conversation.</div>
+<div class="cols"><div class="panel"><div class="bubble">I found two things that need you and three tasks I can continue.</div><div class="bubble me">Continue the redesign, but keep actions governed.</div><div class="bubble">Done. Production changes remain behind approval.</div></div><div class="panel"><div class="row"><b>System health</b><span class="accent">HEALTHY</span></div><div class="row"><b>Approvals</b><span>2</span></div><div class="row"><b>Project</b><span>Mobile v2</span></div></div></div>
+</div>
+<div class="actions"><button data-v="approve">Approve</button><button data-v="changes">Needs Changes</button><button data-v="reject">Reject</button><span class="saved"></span></div>
+</section>
+
+<section class="concept" data-id="analytics">
+<div class="concept-head"><div><b>04 · Analytics Command</b><small>Operational intelligence · metrics first</small></div><span class="decision"></span></div>
+<div class="preview analytics">
+<div class="minihead"><strong>OPEE</strong><div class="nav"><span>Overview</span><span>Analytics</span><span>Work</span><span>Nodes</span><span>Evidence</span></div><span>LIVE</span></div>
+<div class="kicker">OPERATIONAL INTELLIGENCE</div><h2>Measure what OPEE is actually accomplishing.</h2><div class="sub">Ideal when system performance, verified outcomes, time saved and reliability are primary.</div>
+<div class="stats"><div class="stat"><b>94.2%</b><span>Completion</span></div><div class="stat"><b>38</b><span>Tasks</span></div><div class="stat"><b>11.6h</b><span>Saved</span></div><div class="stat"><b>7.4m</b><span>Median</span></div></div>
+<div class="cols"><div class="panel"><div class="row"><b>Native Clove contract</b><span class="accent">PASS</span></div><div class="row"><b>Codex canary</b><span class="accent">PASS</span></div><div class="row"><b>A16 handoff</b><span class="accent">PASS</span></div></div><div class="panel"><b style="font-size:10px">Outcome quality</b><div style="width:120px;height:120px;border-radius:50%;margin:15px auto;background:conic-gradient(#55d58c 0 74%,#f1b860 74% 90%,#ef7474 90%);display:grid;place-items:center"><div style="width:78px;height:78px;border-radius:50%;background:#11171c;display:grid;place-items:center;font-size:18px;font-weight:700">94%</div></div></div></div>
+</div>
+<div class="actions"><button data-v="approve">Approve</button><button data-v="changes">Needs Changes</button><button data-v="reject">Reject</button><span class="saved"></span></div>
+</section>
+
+<section class="concept" data-id="hybrid">
+<div class="concept-head"><div><b>05 · Elegant Hybrid</b><small>Balanced flagship · conversation + analytics + control</small></div><span class="decision"></span></div>
+<div class="preview hybrid">
+<div class="minihead"><strong>OPEE</strong><div class="nav"><span>Home</span><span>Clove</span><span>Work</span><span>Analytics</span><span>Systems</span></div><span>● LIVE</span></div>
+<div class="cols"><div class="panel heroPanel"><div class="kicker">OPERATING ENVIRONMENT</div><h2>Your work, AI, systems and outcomes—under one calm control surface.</h2><div class="sub">The most balanced direction for a flagship OPEE product.</div><div class="stats"><div class="stat"><b>12</b><span>Outcomes</span></div><div class="stat"><b>94%</b><span>Verified</span></div><div class="stat"><b>2.8h</b><span>Saved</span></div><div class="stat"><b>5</b><span>Providers</span></div></div></div><div class="panel"><b style="font-size:10px">Needs you</b><div class="row"><b>Mobile direction</b><span class="accent">REVIEW</span></div><div class="row"><b>Studio publish</b><span>HOLD</span></div></div></div>
+<div class="cols"><div class="panel"><b style="font-size:10px">Clove</b><div class="bubble">I can continue once you choose a direction.</div><div class="bubble me">Show me the most premium.</div></div><div class="panel"><div class="row"><b>Native Clove</b><span class="accent">PASS</span></div><div class="row"><b>Codex action</b><span class="accent">PASS</span></div></div></div>
+</div>
+<div class="actions"><button data-v="approve">Approve</button><button data-v="changes">Needs Changes</button><button data-v="reject">Reject</button><span class="saved"></span></div>
+</section>
+
+</div></div>
+<script>
+document.querySelectorAll('.concept').forEach(c=>{
+  const key='opee-v2-review:'+c.dataset.id;
+  const saved=c.querySelector('.saved');
+  const decision=c.querySelector('.decision');
+  const refresh=()=>{const v=localStorage.getItem(key); saved.textContent=v?'Saved: '+v:''; decision.textContent=v?('Decision: '+v):'Not reviewed';};
+  c.querySelectorAll('button[data-v]').forEach(b=>b.addEventListener('click',()=>{localStorage.setItem(key,b.dataset.v);refresh();}));
+  refresh();
+});
+</script>
+</body></html>
