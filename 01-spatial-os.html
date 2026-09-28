@@ -1,0 +1,78 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>OPEE v2 — Spatial OS</title>
+<style>
+:root{--bg:#080a0d;--surface:#10141a;--surface2:#141a21;--line:#252d37;--text:#f5f6f4;--muted:#8b96a3;--gold:#d8bb68;--mint:#73e3b0;--blue:#75b9ff;--rose:#ff9c93}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}button,input,textarea{font:inherit}
+.shell{display:grid;grid-template-columns:74px minmax(0,1fr) 330px;min-height:100vh}
+.rail{border-right:1px solid var(--line);padding:14px 10px;background:#090c10;display:flex;flex-direction:column;align-items:center;gap:10px}.logo{width:44px;height:44px;border:1px solid #303944;border-radius:15px;display:grid;place-items:center;font-weight:800;color:var(--gold);background:linear-gradient(145deg,#171d24,#0c0f13);margin-bottom:9px}.rnav{width:44px;height:44px;border:0;border-radius:13px;background:transparent;color:#7d8792}.rnav.on,.rnav:hover{background:#171d24;color:#fff}.rail .spacer{flex:1}
+.main{min-width:0;position:relative;overflow:hidden}.topbar{height:72px;display:flex;align-items:center;gap:12px;padding:0 22px;border-bottom:1px solid var(--line);background:#0a0d11cc;backdrop-filter:blur(18px);position:relative;z-index:4}.crumb{font-size:10px;color:var(--muted);white-space:nowrap}.search{flex:1;max-width:680px;margin:auto;display:flex;gap:9px;align-items:center;background:#11161c;border:1px solid #28313c;border-radius:13px;padding:10px 12px}.search input{flex:1;background:transparent;border:0;outline:0;color:#fff;font-size:11px}.kbd{font-size:8px;color:#7e8995;border:1px solid #303945;border-radius:6px;padding:3px 5px}.live{font-size:9px;color:var(--mint)}
+.canvas{position:relative;min-height:calc(100vh - 72px);background:
+radial-gradient(circle at 50% 50%,#111923 0,#0a0d11 48%,#080a0d 74%);
+overflow:hidden;padding:25px}
+.canvas:before{content:"";position:absolute;inset:0;background-image:radial-gradient(#2b343f 1px,transparent 1px);background-size:26px 26px;opacity:.34}
+.canvas-title{position:relative;z-index:2}.canvas-title .ey{font-size:9px;letter-spacing:.14em;color:#72808d}.canvas-title h1{font-size:28px;letter-spacing:-.04em;margin:6px 0 5px}.canvas-title p{font-size:10px;color:var(--muted);margin:0}
+.graph{position:relative;height:660px;max-width:920px;margin:5px auto 0}.wire{position:absolute;height:1px;background:linear-gradient(90deg,transparent,#42505e,transparent);transform-origin:left center;opacity:.8}.wire.w1{width:250px;left:45%;top:47%;transform:rotate(-31deg)}.wire.w2{width:255px;left:45%;top:47%;transform:rotate(27deg)}.wire.w3{width:230px;left:45%;top:47%;transform:rotate(148deg)}.wire.w4{width:215px;left:45%;top:47%;transform:rotate(203deg)}.wire.w5{width:190px;left:45%;top:47%;transform:rotate(88deg)}
+.node{position:absolute;width:188px;border:1px solid #2b3540;background:linear-gradient(180deg,#141a21ee,#0e1217ee);border-radius:20px;padding:14px;box-shadow:0 18px 60px #0008;cursor:pointer;transition:.2s transform,.2s border-color}.node:hover,.node.active{transform:translateY(-4px);border-color:#766738}.node .type{font-size:8px;color:#778390;letter-spacing:.11em}.node b{font-size:12px;display:block;margin-top:5px}.node small{display:block;color:var(--muted);font-size:9px;line-height:1.45;margin-top:5px}.node .state{display:flex;gap:5px;align-items:center;margin-top:10px;font-size:8px;color:#95a0ab}.node .state i{width:6px;height:6px;border-radius:50%;background:var(--mint);box-shadow:0 0 10px #73e3b066}
+.center{left:43%;top:39%;width:210px;border-color:#64592f;background:linear-gradient(180deg,#1a1a16,#11130f)}.center .orb{width:38px;height:38px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff2b5,#c09e43 38%,#3c3218 78%);box-shadow:0 0 28px #d8bb684d;margin-bottom:8px}
+.tog{left:66%;top:12%}.cod3{left:69%;top:61%}.platform{left:14%;top:18%}.kids{left:9%;top:62%}.personal{left:43%;top:78%}
+.legend{position:absolute;bottom:22px;left:25px;z-index:2;background:#0d1116cc;border:1px solid var(--line);border-radius:13px;padding:10px 12px;display:flex;gap:15px;font-size:8px;color:var(--muted)}.legend span{display:flex;align-items:center;gap:6px}.legend i{width:6px;height:6px;border-radius:50%;background:var(--mint)}
+.context{border-left:1px solid var(--line);background:#0c1015;padding:20px 17px;overflow:auto}.context .ey{font-size:8px;letter-spacing:.13em;color:#77838f}.context h2{font-size:18px;letter-spacing:-.03em;margin:6px 0}.context p{font-size:10px;color:var(--muted);line-height:1.55}.context-card{border:1px solid #252e38;background:#11161c;border-radius:14px;padding:12px;margin-top:10px}.context-card h3{font-size:10px;margin:0 0 9px}.row{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-top:1px solid #222a33;font-size:9px}.row:first-of-type{border-top:0}.row span{color:var(--muted)}.good{color:var(--mint)!important}.warn{color:#f2c36e!important}.action{width:100%;border:1px solid #363f49;background:#171c22;color:#fff;border-radius:10px;padding:9px;margin-top:8px;font-size:9px}.artifact{display:flex;gap:9px;align-items:center;padding:9px 0;border-top:1px solid #222a33}.artifact i{width:28px;height:28px;border-radius:8px;background:#202832;display:grid;place-items:center;font-style:normal;font-size:9px}.artifact b{font-size:9px}.artifact small{display:block;color:var(--muted);font-size:8px;margin-top:2px}
+.clovebar{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:9;width:min(680px,calc(100vw - 450px));background:#11161de8;border:1px solid #303946;border-radius:18px;padding:8px;display:flex;gap:9px;align-items:center;backdrop-filter:blur(22px);box-shadow:0 18px 70px #0009}.cloveorb{width:36px;height:36px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff0b0,#b8963f 42%,#312812 80%)}.clovebar input{flex:1;background:transparent;border:0;outline:0;color:#fff;font-size:10px}.voice{width:36px;height:36px;border:1px solid #37414d;background:#181e25;color:#fff;border-radius:12px}
+.reviewdock{position:fixed;right:18px;bottom:18px;z-index:20;width:255px;background:#11161df4;border:1px solid #323b46;border-radius:16px;padding:10px;box-shadow:0 18px 60px #0008}.rtitle{font-size:9px;color:#9ca5ae;margin-bottom:7px}.rbuttons{display:flex;gap:5px}.rbuttons button{flex:1;background:#191f27;border:1px solid #343e49;color:white;border-radius:8px;padding:7px 5px;font-size:8px}.reviewdock textarea{width:100%;margin-top:7px;background:#0c1015;border:1px solid #2b343e;color:#fff;border-radius:8px;min-height:46px;padding:7px;font-size:8px}.reviewdock span{font-size:8px;color:var(--mint)}
+@media(max-width:1000px){.shell{grid-template-columns:58px 1fr}.context{display:none}.clovebar{width:calc(100vw - 100px)}.graph{transform:scale(.86);transform-origin:top center}.reviewdock{width:230px}}
+@media(max-width:720px){.shell{display:block}.rail{display:none}.topbar{padding:0 12px}.crumb{display:none}.canvas{padding:17px;min-height:820px}.graph{height:700px;transform:scale(.72);width:720px;margin-left:50%;translate:-50% 0}.canvas-title h1{font-size:24px}.clovebar{left:12px;right:12px;bottom:12px;transform:none;width:auto}.reviewdock{position:relative;right:auto;bottom:auto;width:auto;margin:12px;background:#10151b}.legend{display:none}}
+</style></head>
+<body><div class="shell">
+<aside class="rail"><div class="logo">O</div><button class="rnav on">◉</button><button class="rnav">⌘</button><button class="rnav">▦</button><button class="rnav">↗</button><div class="spacer"></div><button class="rnav">⚙</button></aside>
+<main class="main">
+<div class="topbar"><span class="crumb">Universe / All workspaces</span><div class="search"><span>⌕</span><input placeholder="Find anything or tell OPEE what you want…"><span class="kbd">⌘ K</span></div><span class="live">● SYSTEM LIVE</span></div>
+<section class="canvas"><div class="canvas-title"><div class="ey">OPEE SPATIAL OS</div><h1>Your entire operating world, connected.</h1><p>Businesses, projects, agents, files, deployments and outcomes are first-class objects.</p></div>
+<div class="graph">
+<div class="wire w1"></div><div class="wire w2"></div><div class="wire w3"></div><div class="wire w4"></div><div class="wire w5"></div>
+<div class="node center active" data-name="Clove / OPEE Core" data-desc="Universal intelligence and governance layer across every workspace." data-task="3 decisions · 7 autonomous jobs" data-health="All authority paths healthy"><div class="orb"></div><div class="type">INTELLIGENCE CORE</div><b>Clove / OPEE</b><small>Ask, coordinate, authorize, execute and verify.</small><div class="state"><i></i>Live · governed</div></div>
+<div class="node tog" data-name="Taste of Gratitude" data-desc="Products, Square, events, flyers, inventory, customer communication and operations." data-task="Saturday popup · 82% ready" data-health="1 unresolved inventory question"><div class="type">BUSINESS WORKSPACE</div><b>Taste of Gratitude</b><small>Saturday popup · inventory · campaigns</small><div class="state"><i></i>4 jobs moving</div></div>
+<div class="node cod3" data-name="Cod3Black" data-desc="Clients, intake, Signal, demos, proposals, websites and follow-up automation." data-task="Helen intake ready" data-health="2 leads need follow-up"><div class="type">AGENCY WORKSPACE</div><b>Cod3Black</b><small>Leads · client builds · Signal</small><div class="state"><i></i>3 outcomes today</div></div>
+<div class="node platform" data-name="OPEE Platform" data-desc="Self-development, Studio, evidence, routes, nodes and releases." data-task="Mobile v2 redesign active" data-health="A16 + GratitudePC available"><div class="type">PLATFORM</div><b>OPEE Platform</b><small>Studio · Control · Mobile · Evidence</small><div class="state"><i></i>6 tasks active</div></div>
+<div class="node kids" data-name="KidsGym USA" data-desc="Site schedules, staffing, attendance and reporting workflows." data-task="Next site report queued" data-health="No blockers"><div class="type">OPERATIONS</div><b>KidsGym USA</b><small>Schedules · reports · attendance</small><div class="state"><i></i>Ready</div></div>
+<div class="node personal" data-name="Personal / Life" data-desc="Travel, reminders, fitness, rideshare strategy and personal planning." data-task="2 upcoming commitments" data-health="Calendar synced"><div class="type">PERSONAL</div><b>Personal / Life</b><small>Travel · fitness · driving · plans</small><div class="state"><i></i>Context available</div></div>
+</div>
+<div class="legend"><span><i></i>healthy</span><span>Click any object to inspect its live context</span></div>
+</section></main>
+<aside class="context"><div class="ey">SELECTED OBJECT</div><h2 id="ctxName">Clove / OPEE Core</h2><p id="ctxDesc">Universal intelligence and governance layer across every workspace.</p>
+<div class="context-card"><h3>Right now</h3><div class="row"><span>Attention</span><b id="ctxTask">3 decisions · 7 autonomous jobs</b></div><div class="row"><span>Health</span><b class="good" id="ctxHealth">All authority paths healthy</b></div><div class="row"><span>Last verified</span><b>42 sec ago</b></div></div>
+<div class="context-card"><h3>Artifacts</h3><div class="artifact"><i>DOC</i><div><b>Mobile v2 blueprint</b><small>Live design artifact</small></div></div><div class="artifact"><i>WEB</i><div><b>Studio deployment</b><small>Verified release</small></div></div><div class="artifact"><i>LOG</i><div><b>Evidence register</b><small>Authoritative proof</small></div></div></div>
+<div class="context-card"><h3>Actions</h3><button class="action">Open workspace</button><button class="action">Ask Clove about this</button><button class="action">View activity + evidence</button></div>
+</aside></div>
+<div class="clovebar"><div class="cloveorb"></div><input placeholder="Ask Clove anything about your world…"><button class="voice">🎙</button></div>
+
+<div class="reviewdock">
+  <div class="rtitle">Review this direction</div>
+  <div class="rbuttons">
+    <button data-review="approve">Approve</button>
+    <button data-review="changes">Needs changes</button>
+    <button data-review="reject">Reject</button>
+  </div>
+  <textarea id="reviewNotes" placeholder="Optional notes…"></textarea>
+  <span id="reviewSaved"></span>
+</div>
+<script>
+(function(){
+ const key='opee-v2:'+document.title;
+ const saved=document.getElementById('reviewSaved');
+ const notes=document.getElementById('reviewNotes');
+ const data=JSON.parse(localStorage.getItem(key)||'{}');
+ if(data.notes) notes.value=data.notes;
+ if(data.choice) saved.textContent='Saved: '+data.choice;
+ function save(choice){
+   const current=JSON.parse(localStorage.getItem(key)||'{}');
+   if(choice) current.choice=choice;
+   current.notes=notes.value;
+   localStorage.setItem(key,JSON.stringify(current));
+   saved.textContent=current.choice?'Saved: '+current.choice:'Notes saved';
+ }
+ document.querySelectorAll('[data-review]').forEach(b=>b.onclick=()=>save(b.dataset.review));
+ notes.addEventListener('change',()=>save());
+})();
+</script>
+<script>
+document.querySelectorAll('.node').forEach(n=>n.onclick=()=>{document.querySelectorAll('.node').forEach(x=>x.classList.remove('active'));n.classList.add('active');document.getElementById('ctxName').textContent=n.dataset.name;document.getElementById('ctxDesc').textContent=n.dataset.desc;document.getElementById('ctxTask').textContent=n.dataset.task;document.getElementById('ctxHealth').textContent=n.dataset.health;});
+</script></body></html>
