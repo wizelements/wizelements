@@ -1,187 +1,126 @@
 <div align="center">
 
-<!-- HERO HEADER -->
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:000000,50:0d0d0d,100:1a0a2e&height=250&section=header&text=COD3BLACK%20AGENCY&fontSize=70&fontColor=fff&animation=twinkling&fontAlignY=38&desc=AI-Native%20Product%20Studio%20for%20Founders%20%26%20Startups&descSize=22&descAlignY=58&stroke=7c3aed&strokeWidth=2" width="100%"/>
+# COD3BLACK AGENCY
 
-<br>
+### Solomon Watkins · AI-native product engineering, automation, and operating systems
 
-<!-- ANIMATED TAGLINE -->
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=7C3AED&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=80&lines=From+business+objective+to+verified+system;AI+products%2C+automation%2C+and+operating+infrastructure" alt="Typing SVG" /></a>
+We design and build software that is expected to produce a real outcome — revenue, operational capacity, customer conversion, time savings, or reusable technical leverage.
 
-<br><br>
+**Outcome first. Evidence before claims. Production status stated plainly.**
 
-<!-- POSITIONING -->
-**Cod3Black Agency** builds outcome-focused software, automation, and AI systems.<br>
-We prioritize verified value, usable handoff, and systems that can create revenue or save meaningful time.<br>
-Clear scope. Evidence-backed completion. Source ownership.
-
-<br><br>
-
-<!-- PRIMARY CTA -->
-<a href="mailto:contact@cod3blackagency.com?subject=Project%20Inquiry%20via%20GitHub">
-<img src="https://img.shields.io/badge/📧_BOOK_A_FREE_STRATEGY_CALL-Let's_Talk-7c3aed?style=for-the-badge&labelColor=000000" height="50"/>
-</a>
-
-<br><br>
-
-[![Portfolio](https://img.shields.io/badge/PORTFOLIO-c3bai--nu.vercel.app-7c3aed?style=for-the-badge&logo=google-chrome&logoColor=white)](https://c3bai-nu.vercel.app)
-[![LinkedIn](https://img.shields.io/badge/CONNECT-Solomon_Watkins-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/solomonwatkins)
+[Portfolio](https://c3bai-nu.vercel.app) · [Taste of Gratitude](https://tasteofgratitude.shop) · [LinkedIn](https://linkedin.com/in/solomonwatkins) · [Start a project](mailto:contact@cod3blackagency.com?subject=Project%20Inquiry%20via%20GitHub)
 
 </div>
 
 ---
 
-<div align="center">
+## What we build
 
-## ⚡ WHAT WE SHIP
-
-</div>
-
-<table align="center">
-<tr>
-<td align="center" width="33%">
-
-💡 **AI PRODUCTS**  
-*Chatbots • Internal tools • Full AI SaaS*  
-<sub>OpenAI, Claude, LangChain, Stable Diffusion, custom RAG</sub>
-
-</td>
-<td align="center" width="33%">
-
-🛒 **eCOMMERCE & BILLING**  
-*Stripe, Shopify, subscription flows*  
-<sub>Payments, catalog/order flows, subscriptions, reporting</sub>
-
-</td>
-<td align="center" width="33%">
-
-📊 **PLATFORMS & DASHBOARDS**  
-*Multi-tenant apps, realtime dashboards, APIs*  
-<sub>Auth, roles, observability baked in</sub>
-
-</td>
-</tr>
-</table>
+| Capability | Typical deliverables |
+| --- | --- |
+| **Business systems** | Websites, lead funnels, booking, commerce, CRM, admin dashboards, reporting |
+| **AI-enabled workflows** | Classification, diagnosis, recommendations, agents, bounded AI integrations |
+| **Automation** | Repetitive operational work converted into reliable, observable workflows |
+| **Product infrastructure** | Auth, payments, data, APIs, deployment, monitoring, CI/CD |
+| **Internal tools** | Control planes, staff portals, workflow interfaces, operational dashboards |
+| **Reusable platforms** | Components, templates, utilities, and governed patterns that lower future delivery cost |
 
 ---
 
-<div align="center">
+## Selected systems
 
-## 🚀 CURRENT SYSTEMS
-
-</div>
-
-| System | What it is | Current role |
+| System | What it demonstrates | Status |
 | --- | --- | --- |
-| **OPEE** | Outcome operating system for governed multi-system execution, evidence, verification, recovery, and value measurement | Active proprietary system |
-| [**Cod3Black Agency**](https://github.com/wizelements/c3bai) | Commercial front door for done-for-you AI business systems, websites, funnels, dashboards, and automation | Active commercial platform |
-| **Cod3Black Signal** | Structured lead-intelligence and diagnosis edge feeding Cod3Black opportunities into governed workflows | Active private system |
-| [**Taste of Gratitude / Gratog**](https://github.com/wizelements/Gratog) | Commerce and operations platform for the live beverage and sea moss brand | Active production system — [tasteofgratitude.shop](https://tasteofgratitude.shop) |
-| **MusiCards** | Deterministic music-learning game studio with governed AI boundaries and explicit production gates | Active private product |
-| [**NHBBI CRM**](https://github.com/wizelements/nhbbi-crm) | CRM, membership, payment, and communications platform | Active product |
-| [**ASCA PWA**](https://github.com/wizelements/asca-pwa) | PWA + admin platform for Atlanta Saddle Club Association | Active client/product system |
+| [**Taste of Gratitude / Gratog**](https://github.com/wizelements/Gratog) | Production commerce and operations for a live beverage brand: Square payments, order flows, scheduled campaigns, email/SMS integrations, tests, and Vercel deployment | **Live production** · [tasteofgratitude.shop](https://tasteofgratitude.shop) |
+| [**ASCA PWA**](https://github.com/wizelements/asca-pwa) | Client PWA + admin workspace with Turso/libSQL, Drizzle, signed HttpOnly sessions, role checks, Playwright E2E, and explicit production gates | **Active client system** · [demo](https://asca-pwa.vercel.app) |
+| [**Cod3Black Agency**](https://github.com/wizelements/c3bai) | Commercial front door for websites, funnels, dashboards, automation, and AI business systems | **Active commercial platform** · [site](https://c3bai-nu.vercel.app) |
+| [**JD's Horse Ranch PWA**](https://github.com/wizelements/jds-horse-ranch-pwa) | Mobile-first PWA, installable experience, gallery, maps, and contact workflow | **Active client system** |
+| **OPEE** | Governed execution system for routing work, evidence, verification, recovery, and outcome tracking | **Active proprietary system** |
+| **Cod3Black Signal** | Structured lead-intelligence edge with evidence classes, durable local persistence, and governed downstream handoff | **Active private system** |
+| **MusiCards** | Deterministic music-learning game studio with explicit AI boundaries, tests, offline play, and documented completion blockers | **Active private product** |
 
-### Retained product assets
+### Reusable public assets
 
-[Ownly](https://github.com/wizelements/Ownly) · [SD Studio Web](https://github.com/wizelements/sd-studio-web) · [Family Powerhouse](https://github.com/wizelements/family-powerhouse) · [Notion Perfect PDF](https://github.com/wizelements/notionexporterpdf) · [SaaS Opportunity Bot](https://github.com/wizelements/saas-opportunity-bot)
+[**Ownly**](https://github.com/wizelements/Ownly) — SaaS starter foundation with CI and CodeQL  
+[**SD Studio Web**](https://github.com/wizelements/sd-studio-web) — remote Stable Diffusion interface with CI, CodeQL, security policy, and MIT license  
+[**Family Powerhouse**](https://github.com/wizelements/family-powerhouse) — multi-tenant family coordination platform with CI, deploy checks, CodeQL, tests, and operational docs  
+[**SaaS Opportunity Bot**](https://github.com/wizelements/saas-opportunity-bot) — automated pain-signal discovery and LLM-assisted SaaS opportunity analysis
 
-> Historical, superseded, upstream-reference, and placeholder repositories are archived so the active portfolio represents current work instead of every experiment ever built.
-
----
-
-<div align="center">
-
-## 🛠️ TECH STACK
-
-<br>
-
-**Core:** Next.js • React • TypeScript • Svelte • Tailwind • Node.js • Python  
-**Data & Infra:** PostgreSQL • MongoDB • Prisma • Docker • Vercel  
-**AI & Payments:** OpenAI • Claude • Stable Diffusion • Stripe • Ollama
-
-<br><br>
-
-<img src="https://skillicons.dev/icons?i=nextjs,react,typescript,svelte,tailwind,nodejs,python,prisma,postgres,mongodb,docker,vercel,github,figma&theme=dark&perline=7" alt="Tech stack" />
-
-</div>
+> Public repositories are intentionally curated. Private/proprietary systems are described at the capability level without exposing implementation details.
 
 ---
 
-<div align="center">
+## How we work
 
-## 📊 GITHUB STATS
+**Observe → Prove → Scope → Build → Verify → Launch → Improve**
 
-<br>
+A project is not considered complete because code exists or a deployment says “ready.” The intended outcome has to work through the real architecture.
 
-<img src="https://github-readme-stats.vercel.app/api?username=wizelements&show_icons=true&theme=midnight-purple&border_color=7c3aed&bg_color=0d1117&icon_color=7c3aed&title_color=7c3aed&text_color=ffffff&hide_border=false&count_private=true&include_all_commits=true" height="180"/>
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=wizelements&theme=midnight-purple&border=7c3aed&background=0d1117&stroke=7c3aed&ring=7c3aed&fire=7c3aed&currStreakLabel=ffffff" height="180"/>
-
-</div>
-
-<details>
-<summary align="center">📈 More Stats (Activity Graph & Trophies)</summary>
-<br>
-<div align="center">
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=wizelements&bg_color=0d1117&color=7c3aed&line=7c3aed&point=ffffff&area_color=7c3aed&area=true&hide_border=true&custom_title=Contribution%20Graph" width="95%"/>
-<br><br>
-<img src="https://github-profile-trophy.vercel.app/?username=wizelements&theme=discord&no-frame=true&no-bg=true&column=7&margin-w=15" width="100%"/>
-</div>
-</details>
+1. **Define success** — user, business objective, constraints, and economic value.
+2. **Establish truth** — separate verified facts from assumptions, stale state, and unknowns.
+3. **Choose the smallest complete architecture** — no unnecessary complexity.
+4. **Build in testable increments** — with security and failure behavior considered early.
+5. **Verify the real path** — not just an isolated component.
+6. **Deploy deliberately** — preview, production, and rollback expectations are explicit.
+7. **Hand off cleanly** — source, configuration, operating notes, known limitations.
+8. **Measure and compound** — turn repeated work into reusable systems and automation.
 
 ---
 
-<div align="center">
+## Engineering surface
 
-## 🎯 WHY COD3BLACK?
+**Application:** Next.js · React · TypeScript · Tailwind CSS · Node.js · Python  
+**Data:** PostgreSQL · Prisma · Turso/libSQL · Drizzle  
+**Commerce & communications:** Square · Stripe · Resend · Twilio  
+**AI:** OpenAI integrations · deterministic AI boundaries · local/remote model workflows · Stable Diffusion  
+**Quality:** Playwright · unit/service tests · GitHub Actions · CodeQL · smoke/build gates  
+**Infrastructure:** Vercel · Docker · Cloudflare tooling · APIs · webhooks · scheduled jobs
 
-</div>
-
-<table align="center">
-<tr>
-<td>✅ <b>Verified Delivery</b></td>
-<td>Scope, evidence, completion gates, and explicit production status.</td>
-</tr>
-<tr>
-<td>✅ <b>AI Where Useful</b></td>
-<td>AI is applied where it materially improves the customer or operating outcome.</td>
-</tr>
-<tr>
-<td>✅ <b>Revenue-Focused</b></td>
-<td>We prioritize sales, efficiency, capacity, retention, and reusable leverage.</td>
-</tr>
-<tr>
-<td>✅ <b>Transparent</b></td>
-<td>Clear source access, handoff expectations, and no hidden manual completion path.</td>
-</tr>
-</table>
+The stack changes when the problem requires it. The standard does not: **secure, testable, observable, maintainable, and honest about maturity.**
 
 ---
 
-<div align="center">
+## Commercial delivery
 
-## 💼 READY TO BUILD?
+Our preferred engagement path is:
 
-<br>
+**Diagnostic / Strategy → Paid Prototype → Implementation → Managed Service**
 
-<a href="mailto:contact@cod3blackagency.com?subject=AI%20Product%20Build%20Inquiry&body=Tell%20us%20about%20your%20idea%20and%20timeline:">
-<img src="https://img.shields.io/badge/📧_GET_YOUR_FREE_QUOTE-Let's_Build_Something_Great-7c3aed?style=for-the-badge&labelColor=000000" height="55"/>
-</a>
+That keeps discovery bounded, proves value early, and gives successful systems a path to recurring improvement instead of one-off delivery.
 
-<br><br>
+Typical outcomes include:
 
-**⚡ Focused engagements. Clear scope. Verified handoff.**
+- more qualified leads and cleaner follow-up;
+- less manual administrative work;
+- faster customer response and order handling;
+- secure internal workflows and dashboards;
+- repeatable deployment and operating processes;
+- reusable software assets that lower the cost of future delivery.
 
-<br>
+---
 
-<img src="https://komarev.com/ghpvc/?username=wizelements&color=7c3aed&style=for-the-badge&label=PROFILE+VIEWS"/>
+## Public portfolio standard
 
-<br><br>
+The account is being managed as a professional portfolio, not an archive of every experiment.
 
-[![GitHub](https://img.shields.io/badge/Follow_@wizelements-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/wizelements)
+- Legacy coursework and superseded experiments are archived.
+- Current repositories identify real status instead of using “complete” loosely.
+- Public projects should show purpose, setup, security expectations, testing, deployment, and known limitations.
+- Private systems stay private; capability claims remain bounded to what can be defended.
+- Featured work is chosen for business relevance, engineering depth, and proof.
 
-</div>
+See the working scorecard: **[GitHub A+ Plan](./GITHUB_A_PLUS_PLAN.md)**.
 
-<br>
+---
 
-<!-- FOOTER -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a0a2e,50:0d0d0d,100:000000&height=100&section=footer" width="100%"/>
+## Work with Cod3Black
+
+If the problem is costing time, revenue, conversion, or operating capacity, send the current workflow and desired outcome.
+
+**contact@cod3blackagency.com**
+
+[Portfolio](https://c3bai-nu.vercel.app) · [GitHub](https://github.com/wizelements) · [LinkedIn](https://linkedin.com/in/solomonwatkins)
+
+---
+
+<sub>Cod3Black Agency · Outcome-focused software, automation, AI systems, and evidence-backed delivery.</sub>
