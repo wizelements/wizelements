@@ -108,8 +108,10 @@ The account is being managed as a professional portfolio, not an archive of ever
 - Public projects should show purpose, setup, security expectations, testing, deployment, and known limitations.
 - Private systems stay private; capability claims remain bounded to what can be defended.
 - Featured work is chosen for business relevance, engineering depth, and proof.
+- Duplicate product families are governed by a single canonical repository and a documented consolidation map.
 
-See the working scorecard: **[GitHub A+ Plan](./GITHUB_A_PLUS_PLAN.md)**.
+See the working scorecard: **[GitHub A+ Plan](./GITHUB_A_PLUS_PLAN.md)**.  
+See the canonical product map: **[Project Portfolio](./PROJECT_PORTFOLIO.md)**.
 
 ---
 
